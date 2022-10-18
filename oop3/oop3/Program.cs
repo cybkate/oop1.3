@@ -4,6 +4,16 @@
     decimal u = decimal.Parse(Console.ReadLine());  //метод, який використовується для перетворення рядкового представлення числа в його десятковий еквівалент.
     Console.WriteLine("Введіть поточну ціну євро в гривнях ");
     decimal e = decimal.Parse(Console.ReadLine());
+    if (u==0)
+    {
+        Console.WriteLine("Помилка");
+        Environment.Exit(0);
+    }
+    if (e==0)
+    {
+        Console.WriteLine("Помилка");
+        Environment.Exit(0);
+    }
     Converter converter = new Converter(u, e);
     Console.WriteLine("Яку конвертацію ви бажаєте отримати? 1 - долар в гривню, 2 - долар в євро, 3 - гривня в долар, 4 - гривня в євро");
     int i = Convert.ToInt32(Console.ReadLine());
